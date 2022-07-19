@@ -9,6 +9,8 @@ ________________||Default Style ||___________*/
     --black: #3A3A3A;
     --white: #fff;
     --purple: #E02C6D;
+    --blue: #0A0826;
+    --yellow: #FB8200;
 }
 
 *{
@@ -23,7 +25,7 @@ body{
 }
 
 .container{
-    width: 1200px;
+    max-width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -80,6 +82,14 @@ ul.menu_list li a {
     font-size: 16px;
     color: var(--black);
     font-weight: 600;
+    transition: 0.4s ease-in-out;
+}
+
+.menu_list li:hover a{
+    color: #E02C6D;
+}
+.menu_list li a.active{
+    color: #E02C6D;
 }
 
 .main_menu span {
@@ -123,6 +133,10 @@ ________________|| Hero Start||_____________ */
     font-size: 16px;
     margin: 22px 0;
 }
+.hero_img {
+    width: 50%;
+    position: relative;
+}
 
 .shape img {
     position: absolute;
@@ -132,7 +146,7 @@ ________________|| Hero Start||_____________ */
 }
 
 .hero_img img {
-    width: 440px;
+    width: 400px;
     height: 414px;
 }
 /*___________________________________________
@@ -176,3 +190,281 @@ _____________||Business Logo Start ||____________*/
 
 /*_______________________________________________
 _____________||Business Logo End ||______________*/
+/*_______________________________________________
+___________|| Collection Bolg start||____________*/
+.collections{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.collection_heading {
+    text-align: center;
+    font-size: 30px;
+    color: var(--black);
+    margin-bottom: 40px;
+}
+
+.collection_item{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.single_collection {
+    padding: 15px 18px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.collection_img img {
+    width: 100%;
+    height: 256px;
+}
+
+.collection_info h2 {
+    font-size: 28px;
+    line-height: 40px;
+    color: var(--black);
+    padding: 8px 0;
+    font-weight: 600;
+}
+
+.collection_info .price {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.rating_icon {
+    padding: 10px 0;
+}
+
+.rating_icon span {
+    color: var(--yellow);
+    font-size: 15px;
+}
+
+.rating_icon .rating {
+    color: var(--black);
+}
+
+.collection_info p {
+    font-size: 16px;
+    color: var(--black);
+    padding-bottom: 10px;
+}
+
+.see_more {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.see_more a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--purple);
+    text-transform: capitalize;
+}
+
+.see_more a i {
+    margin-left: 5px;
+}
+
+/*_______________________________________________
+___________|| Collection Bolg End||____________*/
+/*_______________________________________________
+___________|| Future Area Start ||______________*/
+
+section.future {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.future_area {
+    display: flex;
+    gap: 65px;
+    align-items: center;
+}
+
+.futre_img img {
+    width: 404px;
+    height: 270px;
+}
+
+.future_content h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--black);
+    padding-bottom: 22px;
+}
+
+.future_content p {
+    font-size: 16px;
+    color: var(--black);
+    padding-bottom: 20px;
+}
+
+/*_______________________________________________
+___________|| Future Area End ||________________*/
+/*_______________________________________________
+_______________|| Footer Start ||________________*/
+
+footer {
+    background: var(--blue);
+    padding: 32px 0;
+}
+
+.footer_content {
+    text-align: center;
+}
+
+.footer_content h3 {
+    color: var(--white);
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+.footer_content p {
+    font-size: 16px;
+    color: var(--white);
+    line-height: 32px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/*_______________________________________________
+_________________|| Footer End||_________________*/
+
+/*_______________________________________________
+_______________|| @media Queries||_______________*/
+
+
+@media screen and (max-width: 400px){
+    .futre_img img {
+        width: 360px;
+        height: 270px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .menu_list, .hide{
+        display: none !important;
+    }
+
+    .header_bar {
+        justify-content: center;
+        gap: 52px;
+    }
+    .logo a {
+        font-size: 20px;
+    }
+
+    .hero_bar {
+        flex-direction: column-reverse;
+    }
+
+    .hero_img img {
+        width: 257px;
+        height: 302px;
+    }
+
+    .hero_content {
+        width: 100%;
+        text-align: center;
+    }
+    .business_logo_img::before,
+    .business_logo_img::after{
+        display: none;
+    }
+
+    .collection_item {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .collection_img img {
+    width: 100%;
+    height: 325px;
+    }
+
+    .future_area {
+        flex-direction: column-reverse;
+    }
+    .future_content {
+        text-align: center;
+    }
+    
+    /* .business_logo, .collections .future footer */
+    
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px){
+    .menu_list, .hide{
+        display: none !important;
+    }
+
+    .header_bar {
+        justify-content: center;
+        gap: 220px;
+    }
+    .hero_bar {
+        flex-direction: column-reverse;
+    }
+
+    .hero_content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .business_logo_img::before,
+    .business_logo_img::after{
+        display: none;
+    }
+
+    .collection_item {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .future_area {
+        flex-direction: column-reverse;
+    }
+
+    .futre_img img {
+        width: 600px;
+        height: 315px;
+    }
+    .future_content {
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 767px) and (max-width: 1200px){
+    
+    /* .business_logo, .collections .future footer{
+        display: none;
+    } */
+
+    .business_logo_img::before,
+    .business_logo_img::after{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
